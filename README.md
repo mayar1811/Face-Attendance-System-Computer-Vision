@@ -1,18 +1,21 @@
-# Face-Attendance-System-Computer-Vision
+# Face Recognition Attendance System
 
 ## Overview
 The Face Recognition Attendance System is an AI-powered desktop application designed to automate attendance recording using facial recognition. Traditional attendance methods are often manual, time-consuming, and prone to errors or proxy attendance. This system leverages computer vision and machine learning to recognize individuals from a live video stream and log attendance in real time.
 
 ## Methodology
 The system operates in three main stages:
-1.⁠ ⁠Dataset preparation and model usage
-2.⁠ ⁠Model serialization and loading
-3.⁠ ⁠Real-time inference through a graphical user interface (GUI)
+•⁠  ⁠Dataset preparation and model usage
+•⁠  ⁠Model serialization and loading
+•⁠  ⁠Real-time inference through a graphical user interface (GUI)
 
 Two face recognition pipelines were developed and compared:
 
-•⁠  ⁠*InsightFace + Logistic Regression:* Uses pretrained InsightFace embeddings with a logistic regression classifier.
-•⁠  ⁠*MTCNN + FaceNet + Cosine Similarity:* Uses MTCNN for face detection and FaceNet embeddings with cosine similarity for recognition.
+•⁠  ⁠*InsightFace + Logistic Regression:*  
+  Uses pretrained InsightFace embeddings with a logistic regression classifier.
+
+•⁠  ⁠*MTCNN + FaceNet + Cosine Similarity:*  
+  Uses MTCNN for face detection and FaceNet embeddings with cosine similarity for recognition.
 
 ### 1. Dataset Collection and Preparation
 •⁠  ⁠Custom dataset with 14 students from the university.
@@ -22,7 +25,6 @@ Two face recognition pipelines were developed and compared:
 
 ### 2. Multi-Model Approach Overview
 The two pipelines allow evaluation of:
-
 •⁠  ⁠Embedding quality and separability
 •⁠  ⁠Classification vs. metric-based recognition
 •⁠  ⁠Real-time feasibility and accuracy
@@ -84,6 +86,39 @@ The two pipelines allow evaluation of:
 •⁠  ⁠*InsightFace + Logistic Regression* showed higher confidence and accuracy.
 •⁠  ⁠*FaceNet + Cosine Similarity* had lower confidence and missed some known faces.
 •⁠  ⁠InsightFace pipeline was more robust to lighting and pose variations.
+
+---
+
+## Ethical Implications
+
+### Privacy and Consent
+•⁠  ⁠All participants voluntarily consented for academic use.
+•⁠  ⁠No public or internet images used.
+•⁠  ⁠Real-world deployment requires explicit, revocable consent and transparency.
+
+### Data Security
+•⁠  ⁠Embeddings stored locally with restricted access.
+•⁠  ⁠Future recommendations include encryption and role-based access.
+
+### Fairness and Bias
+•⁠  ⁠Dataset limited in diversity, which limits generalization.
+•⁠  ⁠Ethical deployment requires bias auditing and diverse datasets.
+
+### Surveillance Risks
+•⁠  ⁠System designed for attendance only, not continuous monitoring.
+•⁠  ⁠Institutions should implement clear policies on system use.
+
+### Transparency and Accountability
+•⁠  ⁠Users should have access to logs and means to report errors.
+•⁠  ⁠Institutions must monitor and review system behavior and fairness.
+
+---
+
+## Usage
+1.⁠ ⁠Prepare your dataset in the specified folder structure.
+2.⁠ ⁠Train or load pretrained models for InsightFace + Logistic Regression or FaceNet + Cosine Similarity.
+3.⁠ ⁠Launch the GUI application to start real-time attendance logging.
+4.⁠ ⁠Export attendance logs as CSV.
 
 ---
 
